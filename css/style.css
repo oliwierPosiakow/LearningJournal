@@ -1,0 +1,212 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    margin: 0;
+}
+
+/*header*/
+header{
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+    height: 10vh;
+    background-color: #141204;
+    color: whitesmoke;
+    padding: .8em .5em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h2{
+    font-size: 1rem;
+    font-style: italic;
+}
+.logo i{
+    margin-right: .5em;
+    font-size: 2rem;
+}
+
+.list a{
+    font-size: 0.8rem;
+    font-weight: 400;
+    display: inline-block;
+    margin: 0 0.5em;
+    text-decoration: none;
+    color: whitesmoke; 
+}
+.list a:hover{
+    text-decoration: underline;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-image: url("../images/banner.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    min-width: 100vw;
+    height: 85vh;
+}
+
+.banner-text{
+    display: flex;
+    justify-content: center;
+    padding: 0.8em;
+    background-color: rgba(68, 68, 68, 0.42);
+    width: 100%;
+}
+.banner-wrapper{
+    text-align: left;
+    width: 1500px;
+}
+
+.banner p{
+    margin: 0;
+    max-width: 600px;
+    line-height: 1.3;
+    text-shadow: 0 0 3px black;
+}
+.banner h2{
+    margin: 0.5em 0;
+}
+
+
+/*main*/
+
+.wrapper{
+    max-width: 1500px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10em;
+}
+
+.panels{
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+main button{
+    z-index: 1;
+    display: block;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 2em auto;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #141204;
+}
+
+.panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    
+    "img img"
+    "date ."
+    "title ."
+    "desc desc";
+    padding: 1em;
+    box-shadow: 0px 0px 2px #9A9788;
+    min-width: 290px;
+}
+
+.panel a{
+    grid-area: img;
+}
+.panel-img{
+    max-width: 100%;
+}
+.panel-date{
+    grid-area: date;
+}
+.panel-h2{
+    margin: 0;
+    grid-area: title;
+}
+.panel-desc{
+    line-height: 1.3;
+    grid-area: desc;
+}
+
+/*footer*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141204;
+    position: relative;
+    min-width: 100vw;
+    height: 10.1vh;
+}
+footer i{
+    color: whitesmoke;
+    font-size: 2rem;
+    cursor: pointer; 
+}
+
+.custom-shape-divider-bottom-1671213871 {
+    position: absolute;
+    bottom: 10vh;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1671213871 svg {
+    position: relative;
+    display: block;
+    width: calc(175% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1671213871 .shape-fill {
+    fill: #141204;
+}
+
+@media (min-width: 750px){
+    .panels{
+        grid-template-columns: 1fr 1fr;
+    }
+    nav{
+        padding: 1em 2em;
+    }
+    .logo h2{
+        font-size: 1.5rem;
+    }
+    .list a{
+        font-size: 1.2rem;
+    }
+    footer i{
+        font-size: 3rem;
+    }
+}
+@media (min-width: 900px){
+    .panels{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
